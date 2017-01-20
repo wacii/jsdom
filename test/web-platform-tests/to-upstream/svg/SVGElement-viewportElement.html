@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>SVGElement.prototype.viewportElement</title>
+<link rel=help href="https://svgwg.org/svg2-draft/types.html#__svg__SVGElement__viewportElement">
+<script src="/resources/testharness.js"></script>
+<script src="/resources/testharnessreport.js"></script>
+
+<body>
+  <svg id="test1">
+    <svg id="test2">
+      <symbol id="test3">
+        <svg id="test4"></svg>
+      </symbol>
+    </svg>
+  </svg>
+</body>
+
+<script>
+"use strict";
+
+test(() => {
+  const svg1 = document.getElementById("test1");
+  const svg2 = document.getElementById("test2");
+  const svg3 = document.getElementById("test4");
+
+  assert_equals(svg1.viewportElement, null);
+  assert_equals(svg2.viewportElement.id, "test1");
+  assert_equals(svg3.viewportElement.id, "test3");
+});
+</script>

@@ -82,6 +82,8 @@ describe("Local tests in Web Platform Test format (to-upstream)", () => {
     "html/webappapis/timers/arguments.html",
     "html/webappapis/timers/errors.html",
     "html/webappapis/timers/settimeout-setinterval-handles.html",
+    "svg/SVGElement-ownerSVGElement.html",
+    "svg/SVGElement-viewportElement.html",
     "XMLHttpRequest/formdata-constructor.html",
     "XMLHttpRequest/thrown-error-in-events.html",
     "XMLHttpRequest/send-authentication-cors-post.htm"
